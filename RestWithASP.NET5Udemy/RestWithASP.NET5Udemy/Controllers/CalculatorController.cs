@@ -21,7 +21,7 @@ namespace RestWithASP.NET5Udemy.Controllers
         }
 
         [HttpGet("sum/{firstNumber}/{secondNumber}")]
-        public IActionResult Get(string firstNumber, string secondNumber)
+        public IActionResult Sum(string firstNumber, string secondNumber)
         {
             if (IsNumeric(firstNumber) && IsNumeric(secondNumber))
             {
@@ -61,6 +61,17 @@ namespace RestWithASP.NET5Udemy.Controllers
             {
                 var mult = ConverToDecimal(firstNumber) * ConverToDecimal(secondNumber);
                 return Ok(mult.ToString());
+            }
+            return BadRequest("Invalid input");
+        }
+
+        [HttpGet("mean/{firstNumber}/{secondNumber}")]
+        public IActionResult Mean(string firstNumber, string secondNumber)
+        {
+            if (IsNumeric(firstNumber) && IsNumeric(secondNumber))
+            {
+                var mean = (ConverToDecimal(firstNumber) + ConverToDecimal(secondNumber)) /2 ;
+                return Ok(mean.ToString());
             }
             return BadRequest("Invalid input");
         }
