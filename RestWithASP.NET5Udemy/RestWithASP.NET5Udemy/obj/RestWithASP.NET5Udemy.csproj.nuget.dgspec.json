@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Repository\\RestWithASP.NET5Udemy\\RestWithASP.NET5Udemy\\RestWithASP.NET5Udemy\\RestWithASP.NET5Udemy.csproj": {}
+    "C:\\Repository\\RestWithASP.NET5Udemy_Calculator\\RestWithASP.NET5Udemy\\RestWithASP.NET5Udemy\\RestWithASP.NET5Udemy.csproj": {}
   },
   "projects": {
-    "C:\\Repository\\RestWithASP.NET5Udemy\\RestWithASP.NET5Udemy\\RestWithASP.NET5Udemy\\RestWithASP.NET5Udemy.csproj": {
+    "C:\\Repository\\RestWithASP.NET5Udemy_Calculator\\RestWithASP.NET5Udemy\\RestWithASP.NET5Udemy\\RestWithASP.NET5Udemy.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Repository\\RestWithASP.NET5Udemy\\RestWithASP.NET5Udemy\\RestWithASP.NET5Udemy\\RestWithASP.NET5Udemy.csproj",
+        "projectUniqueName": "C:\\Repository\\RestWithASP.NET5Udemy_Calculator\\RestWithASP.NET5Udemy\\RestWithASP.NET5Udemy\\RestWithASP.NET5Udemy.csproj",
         "projectName": "RestWithASP.NET5Udemy",
-        "projectPath": "C:\\Repository\\RestWithASP.NET5Udemy\\RestWithASP.NET5Udemy\\RestWithASP.NET5Udemy\\RestWithASP.NET5Udemy.csproj",
+        "projectPath": "C:\\Repository\\RestWithASP.NET5Udemy_Calculator\\RestWithASP.NET5Udemy\\RestWithASP.NET5Udemy\\RestWithASP.NET5Udemy.csproj",
         "packagesPath": "C:\\Users\\carlo\\.nuget\\packages\\",
-        "outputPath": "C:\\Repository\\RestWithASP.NET5Udemy\\RestWithASP.NET5Udemy\\RestWithASP.NET5Udemy\\obj\\",
+        "outputPath": "C:\\Repository\\RestWithASP.NET5Udemy_Calculator\\RestWithASP.NET5Udemy\\RestWithASP.NET5Udemy\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
