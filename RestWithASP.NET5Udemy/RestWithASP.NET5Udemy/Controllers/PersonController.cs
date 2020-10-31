@@ -4,32 +4,59 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using RestWithASP.NET5Udemy.Model;
+using RestWithASP.NET5Udemy.Business;
 
 namespace RestWithASP.NET5Udemy.Controllers
 {
+    [ApiVersion("1")]
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]/v{Version:apiVersion}")]
     public class PersonController : ControllerBase
     {
-      
 
+        private IPersonBusiness _personBusiness;
         private readonly ILogger<PersonController> _logger;
 
-        public PersonController(ILogger<PersonController> logger)
+        public PersonController(ILogger<PersonController> logger, IPersonBusiness personBusiness)
         {
             _logger = logger;
+            _personBusiness = personBusiness;
         }
 
-        [HttpGet("sum/{firstNumber}/{secondNumber}")]
-        public IActionResult Sum(string firstNumber, string secondNumber)
+        [HttpGet]
+        public IActionResult Get()
         {
-            if (IsNumeric(firstNumber) && IsNumeric(secondNumber))
-            {
-                var sum = ConverToDecimal(firstNumber) + ConverToDecimal(secondNumber);
-                return Ok(sum.ToString());
-            }
+            return Ok(_personBusiness.FindAll());
+        }
 
-            return BadRequest("Invalid input");
+        [HttpGet("{id}")]
+        public IActionResult Get(long id)
+        {
+            var person = _personBusiness.FindByID(id);
+            if (person == null) return NotFound();
+            return Ok(_personBusiness.FindByID(id));
+        }
+
+        [HttpPost]
+        public IActionResult Post([FromBody] Person person)
+        {
+            if (person == null) return BadRequest();
+            return Ok(_personBusiness.Create(person));
+        }
+
+        [HttpPut]
+        public IActionResult Put([FromBody] Person person)
+        {
+            if (person == null) return BadRequest();
+            return Ok(_personBusiness.Update(person));
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult Delete(long id)
+        {
+            _personBusiness.Delete(id);
+            return NoContent();
         }
 
     }
