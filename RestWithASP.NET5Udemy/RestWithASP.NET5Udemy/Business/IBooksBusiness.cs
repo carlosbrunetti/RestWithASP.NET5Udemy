@@ -1,4 +1,5 @@
-﻿using RestWithASP.NET5Udemy.Model;
+﻿using RestWithASP.NET5Udemy.Data.VO;
+using RestWithASP.NET5Udemy.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,10 +9,10 @@ namespace RestWithASP.NET5Udemy.Business
 {
     public interface IBooksBusiness
     {
-        Book Create(Book books);
-        Book FindByID(long id);
+        BookVO Create(BookVO books);
+        BookVO FindByID(long id);
         void Delete(long id);
-        Book Update(Book books);
-        List<Book> FindAll();
+        BookVO Update(BookVO books);
+        List<BookVO> FindAll();
     }
 }

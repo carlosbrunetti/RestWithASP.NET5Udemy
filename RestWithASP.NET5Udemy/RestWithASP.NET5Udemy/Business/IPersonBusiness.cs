@@ -1,15 +1,16 @@
-﻿using RestWithASP.NET5Udemy.Model;
+﻿using RestWithASP.NET5Udemy.Data.VO;
+using RestWithASP.NET5Udemy.Model;
 using System.Collections.Generic;
 
 namespace RestWithASP.NET5Udemy.Business
 {
     public interface IPersonBusiness
     {
-        Person Create(Person person);
-        Person FindByID(long id);
+        PersonVO Create(PersonVO person);
+        PersonVO FindByID(long id);
         void Delete(long id);
-        Person Update(Person person);
-        List<Person> FindAll();
+        PersonVO Update(PersonVO person);
+        List<PersonVO> FindAll();
              
     }
 }

@@ -1,5 +1,9 @@
-﻿using RestWithASP.NET5Udemy.Model;
+﻿using RestWithASP.NET5Udemy.Data.Converter.Contract;
+using RestWithASP.NET5Udemy.Data.Converter.Implementation;
+using RestWithASP.NET5Udemy.Data.VO;
+using RestWithASP.NET5Udemy.Model;
 using RestWithASP.NET5Udemy.Repository;
+using RestWithASP.NET5Udemy.Repository.Generic;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,30 +13,36 @@ namespace RestWithASP.NET5Udemy.Business.Implementations
 {
     public class BooksBusinessImplementation : IBooksBusiness
     {
-        private readonly IBooksRepository _repository;
-
-        public BooksBusinessImplementation(IBooksRepository repository)
+        private readonly IRepository<Book> _repository;
+        private readonly BookConverter _converter;
+        public BooksBusinessImplementation(IRepository<Book> repository)
         {
             _repository = repository;
+            _converter = new BookConverter();
         }
-        public List<Book> FindAll()
+        public List<BookVO> FindAll()
         {
-            return _repository.FindAll();
+
+            return _converter.Parse(_repository.FindAll());
         }
 
-        public Book FindByID(long id)
+        public BookVO FindByID(long id)
         {
-            return _repository.FindByID(id);
+            return _converter.Parse( _repository.FindByID(id));
         }
 
-        public Book Create(Book books)
+        public BookVO Create(BookVO books)
         {
-            return _repository.Create(books);
+            var bookEntity = _converter.Parse(books);
+            bookEntity = _repository.Create(bookEntity);
+            return _converter.Parse(bookEntity);
         }
 
-        public Book Update(Book books)
+        public BookVO Update(BookVO books)
         {
-            return _repository.Update(books);
+            var bookEntity = _converter.Parse(books);
+            bookEntity =  _repository.Update(bookEntity);
+            return _converter.Parse(bookEntity);
         }
 
         public void Delete(long id)

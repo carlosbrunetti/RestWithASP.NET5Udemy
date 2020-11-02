@@ -16,7 +16,7 @@ using RestWithASP.NET5Udemy.Business;
 using RestWithASP.NET5Udemy.Business.Implementations;
 using RestWithASP.NET5Udemy.Model.Context;
 using RestWithASP.NET5Udemy.Repository;
-using RestWithASP.NET5Udemy.Repository.Implementations;
+using RestWithASP.NET5Udemy.Repository.Generic;
 using Serilog;
 
 namespace RestWithASP.NET5Udemy
@@ -56,10 +56,9 @@ namespace RestWithASP.NET5Udemy
           
             //Dependency Injection
             services.AddScoped<IPersonBusiness, PersonBusinessImplementation>();
-            services.AddScoped<IPersonRepository, PersonRepositoryImplementation>();
-
             services.AddScoped<IBooksBusiness, BooksBusinessImplementation>();
-            services.AddScoped<IBooksRepository, BooksRepositoryImplementation>();
+
+            services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
 
         }
 

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using RestWithASP.NET5Udemy.Business;
+using RestWithASP.NET5Udemy.Data.VO;
 using RestWithASP.NET5Udemy.Model;
 
 namespace RestWithASP.NET5Udemy.Controllers
@@ -39,7 +40,7 @@ namespace RestWithASP.NET5Udemy.Controllers
         }
         
         [HttpPost]
-        public IActionResult Post([FromBody] Book books)
+        public IActionResult Post([FromBody] BookVO books)
         {
             if (books == null)
                 return BadRequest();
@@ -47,7 +48,7 @@ namespace RestWithASP.NET5Udemy.Controllers
         }
 
         [HttpPut]
-        public IActionResult Put([FromBody] Book books)
+        public IActionResult Put([FromBody] BookVO books)
         {
             if (books == null)
                 return BadRequest();
