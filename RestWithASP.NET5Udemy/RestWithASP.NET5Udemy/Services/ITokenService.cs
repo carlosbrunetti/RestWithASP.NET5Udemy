@@ -10,6 +10,6 @@ namespace RestWithASP.NET5Udemy.Services
     {
         string GenerateAccessToken(IEnumerable<Claim> claims);
         string GenerateRefreshToken();
-        ClaimsPrincipal GetClamsPrincipalFromExpiredToken(string token);
+        ClaimsPrincipal GetPrincipalFromExpiredToken(string token);
     }
 }

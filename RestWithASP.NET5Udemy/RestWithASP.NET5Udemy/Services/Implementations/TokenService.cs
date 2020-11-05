@@ -29,7 +29,7 @@ namespace RestWithASP.NET5Udemy.Services.Implementations
                     issuer: _configuration.Issuer,
                     audience: _configuration.Audience,
                     claims: claims,
-                    expires: DateTime.Now.AddMinutes(_configuration.Minuntes),
+                    expires: DateTime.Now.AddMinutes(_configuration.Minutes),
                     signingCredentials: signingCredencials
                 );
 
@@ -47,7 +47,7 @@ namespace RestWithASP.NET5Udemy.Services.Implementations
             };
         }
 
-        public ClaimsPrincipal GetClamsPrincipalFromExpiredToken(string token)
+        public ClaimsPrincipal GetPrincipalFromExpiredToken(string token)
         {
             var tokenValidationParameters = new TokenValidationParameters
             {

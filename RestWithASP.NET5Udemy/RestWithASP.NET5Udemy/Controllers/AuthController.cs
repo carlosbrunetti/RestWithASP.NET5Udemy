@@ -38,7 +38,7 @@ namespace RestWithASP.NET5Udemy.Controllers
         [Route("refresh")]
         public IActionResult Refresh([FromBody] TokenVO tokenVO)
         {
-            if (tokenVO == null)
+            if (tokenVO == null || tokenVO.RefreshToken == null || tokenVO.AccessToken == null)
                 return BadRequest("Invalid client request");
             var token = _loginBusiness.ValidateCredencials(tokenVO);
             if (token == null)

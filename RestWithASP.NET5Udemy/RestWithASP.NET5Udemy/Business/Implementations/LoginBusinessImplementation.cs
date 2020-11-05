@@ -48,7 +48,7 @@ namespace RestWithASP.NET5Udemy.Business.Implementations
             var accessToken = token.AccessToken;
             var refreshToken = token.RefreshToken;
 
-            var principal = _tokenService.GetClamsPrincipalFromExpiredToken(accessToken);
+            var principal = _tokenService.GetPrincipalFromExpiredToken(accessToken);
             var username = principal.Identity.Name;
             var user = _repository.ValidateCredencials(username);
 
@@ -69,17 +69,18 @@ namespace RestWithASP.NET5Udemy.Business.Implementations
             user.RefreshTokenExpiryTime = DateTime.Now.AddDays(_configuration.DaysToExpiry);
 
             DateTime createDate = DateTime.Now;
-            DateTime expirationDate = createDate.AddMinutes(_configuration.Minuntes);
+            DateTime expirationDate = createDate.AddMinutes(_configuration.Minutes);
 
             _repository.ResfreshUserInfo(user);
 
-            return new TokenVO(
-                true,
-                createDate.ToString(DATE_FORMAT),
-                expirationDate.ToString(DATE_FORMAT),
-                accessToken,
-                refreshToken
-                );
+            return new TokenVO
+            {
+                Authenticated = true,
+                Created = createDate.ToString(DATE_FORMAT),
+                Expiration = expirationDate.ToString(DATE_FORMAT),
+                AccessToken = accessToken,
+                RefreshToken = refreshToken
+            };
         }
     }
 }
