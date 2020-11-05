@@ -58,5 +58,10 @@ namespace RestWithASP.NET5Udemy.Repository
             Byte[] hashedBytes = algorithm.ComputeHash(inputBytes);
             return BitConverter.ToString(hashedBytes);
         }
+
+        public User ValidateCredencials(string username)
+        {
+            return _context.Users.SingleOrDefault(u => (u.UserName == username));
+        }
     }
 }

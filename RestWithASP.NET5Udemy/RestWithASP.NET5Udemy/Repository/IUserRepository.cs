@@ -10,6 +10,7 @@ namespace RestWithASP.NET5Udemy.Repository
     public interface IUserRepository
     {
         User ValidateCredencials(UserVO user);
+        User ValidateCredencials(string username);
         User ResfreshUserInfo(User user);
     }
 }

@@ -8,11 +8,13 @@ using RestWithASP.NET5Udemy.Model;
 using RestWithASP.NET5Udemy.Business;
 using RestWithASP.NET5Udemy.Data.VO;
 using RestWithASP.NET5Udemy.Hypermedia.Filters;
+using Microsoft.AspNetCore.Authorization;
 
 namespace RestWithASP.NET5Udemy.Controllers
 {
     [ApiVersion("1")]
     [ApiController]
+    [Authorize("Bearer")]
     [Route("api/[controller]/v{Version:apiVersion}")]
     public class PersonController : ControllerBase
     {
