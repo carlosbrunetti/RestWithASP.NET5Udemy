@@ -7,6 +7,7 @@ using Microsoft.Extensions.Logging;
 using RestWithASP.NET5Udemy.Model;
 using RestWithASP.NET5Udemy.Business;
 using RestWithASP.NET5Udemy.Data.VO;
+using RestWithASP.NET5Udemy.Hypermedia.Filters;
 
 namespace RestWithASP.NET5Udemy.Controllers
 {
@@ -26,12 +27,21 @@ namespace RestWithASP.NET5Udemy.Controllers
         }
 
         [HttpGet]
+        [ProducesResponseType((200), Type = typeof(List<PersonVO>))]
+        [ProducesResponseType((204))]
+        [ProducesResponseType((400))]
+        [ProducesResponseType((401))]
+        [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Get()
         {
             return Ok(_personBusiness.FindAll());
         }
 
         [HttpGet("{id}")]
+        [ProducesResponseType((200), Type = typeof(PersonVO))]
+        [ProducesResponseType((400))]
+        [ProducesResponseType((401))]
+        [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Get(long id)
         {
             var person = _personBusiness.FindByID(id);
@@ -40,6 +50,10 @@ namespace RestWithASP.NET5Udemy.Controllers
         }
 
         [HttpPost]
+        [ProducesResponseType((200), Type = typeof(PersonVO))]
+        [ProducesResponseType((400))]
+        [ProducesResponseType((401))]
+        [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Post([FromBody] PersonVO person)
         {
             if (person == null) return BadRequest();
@@ -47,6 +61,10 @@ namespace RestWithASP.NET5Udemy.Controllers
         }
 
         [HttpPut]
+        [ProducesResponseType((200), Type = typeof(PersonVO))]
+        [ProducesResponseType((400))]
+        [ProducesResponseType((401))]
+        [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Put([FromBody] PersonVO person)
         {
             if (person == null) return BadRequest();
@@ -54,6 +72,10 @@ namespace RestWithASP.NET5Udemy.Controllers
         }
 
         [HttpDelete("{id}")]
+        [ProducesResponseType((204), Type = typeof(PersonVO))]
+        [ProducesResponseType((400))]
+        [ProducesResponseType((401))]
+        [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Delete(long id)
         {
             _personBusiness.Delete(id);

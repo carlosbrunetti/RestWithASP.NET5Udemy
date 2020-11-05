@@ -124,6 +124,17 @@ C:\Repository\RestWithASP.NET5Udemy_Calculator\RestWithASP.NET5Udemy\RestWithASP
 C:\Repository\RestWithASP.NET5Udemy_Calculator\RestWithASP.NET5Udemy\RestWithASP.NET5Udemy\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Repository\RestWithASP.NET5Udemy_Calculator\RestWithASP.NET5Udemy\RestWithASP.NET5Udemy\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Repository\RestWithASP.NET5Udemy_Calculator\RestWithASP.NET5Udemy\RestWithASP.NET5Udemy\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Repository\RestWithASP.NET5Udemy_Calculator\RestWithASP.NET5Udemy\RestWithASP.NET5Udemy\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Repository\RestWithASP.NET5Udemy_Calculator\RestWithASP.NET5Udemy\RestWithASP.NET5Udemy\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Repository\RestWithASP.NET5Udemy_Calculator\RestWithASP.NET5Udemy\RestWithASP.NET5Udemy\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Repository\RestWithASP.NET5Udemy_Calculator\RestWithASP.NET5Udemy\RestWithASP.NET5Udemy\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Repository\RestWithASP.NET5Udemy_Calculator\RestWithASP.NET5Udemy\RestWithASP.NET5Udemy\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Repository\RestWithASP.NET5Udemy_Calculator\RestWithASP.NET5Udemy\RestWithASP.NET5Udemy\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Repository\RestWithASP.NET5Udemy_Calculator\RestWithASP.NET5Udemy\RestWithASP.NET5Udemy\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Repository\RestWithASP.NET5Udemy_Calculator\RestWithASP.NET5Udemy\RestWithASP.NET5Udemy\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Repository\RestWithASP.NET5Udemy_Calculator\RestWithASP.NET5Udemy\RestWithASP.NET5Udemy\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Repository\RestWithASP.NET5Udemy_Calculator\RestWithASP.NET5Udemy\RestWithASP.NET5Udemy\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Repository\RestWithASP.NET5Udemy_Calculator\RestWithASP.NET5Udemy\RestWithASP.NET5Udemy\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
 C:\Repository\RestWithASP.NET5Udemy_Calculator\RestWithASP.NET5Udemy\RestWithASP.NET5Udemy\obj\Debug\netcoreapp3.1\RestWithASP.NET5Udemy.csproj.CoreCompileInputs.cache
 C:\Repository\RestWithASP.NET5Udemy_Calculator\RestWithASP.NET5Udemy\RestWithASP.NET5Udemy\obj\Debug\netcoreapp3.1\RestWithASP.NET5Udemy.MvcApplicationPartsAssemblyInfo.cs
 C:\Repository\RestWithASP.NET5Udemy_Calculator\RestWithASP.NET5Udemy\RestWithASP.NET5Udemy\obj\Debug\netcoreapp3.1\RestWithASP.NET5Udemy.MvcApplicationPartsAssemblyInfo.cache
