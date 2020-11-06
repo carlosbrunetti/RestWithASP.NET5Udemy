@@ -10,5 +10,6 @@ namespace RestWithASP.NET5Udemy.Business
     {
         TokenVO ValidateCredencials(UserVO user);
         TokenVO ValidateCredencials(TokenVO token);
+        bool RevokeToken(string username);
     }
 }

@@ -10,6 +10,7 @@ namespace RestWithASP.NET5Udemy.Business
         PersonVO FindByID(long id);
         void Delete(long id);
         PersonVO Update(PersonVO person);
+        PersonVO Disabled(long id);
         List<PersonVO> FindAll();
              
     }

@@ -11,6 +11,7 @@ namespace RestWithASP.NET5Udemy.Repository
     {
         User ValidateCredencials(UserVO user);
         User ValidateCredencials(string username);
+        bool RevokeToken(string username);   
         User ResfreshUserInfo(User user);
     }
 }

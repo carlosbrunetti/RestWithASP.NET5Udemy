@@ -34,7 +34,8 @@ namespace RestWithASP.NET5Udemy.Business.Implementations
                 return null;
             var claims = new List<Claim>
             {
-                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString("N"))
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString("N")),
+                new Claim(JwtRegisteredClaimNames.UniqueName,user.UserName)
             };
 
             var accessToken = _tokenService.GenerateAccessToken(claims);
@@ -81,6 +82,11 @@ namespace RestWithASP.NET5Udemy.Business.Implementations
                 AccessToken = accessToken,
                 RefreshToken = refreshToken
             };
+        }
+
+        public bool RevokeToken(string username)
+        {
+            return _repository.RevokeToken(username);
         }
     }
 }

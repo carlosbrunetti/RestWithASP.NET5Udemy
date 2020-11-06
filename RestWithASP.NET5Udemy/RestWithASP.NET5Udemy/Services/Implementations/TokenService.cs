@@ -66,7 +66,7 @@ namespace RestWithASP.NET5Udemy.Services.Implementations
             if (jwtSecurityToken == null || !jwtSecurityToken.Header.Alg.Equals(SecurityAlgorithms.HmacSha256, StringComparison.InvariantCulture))
                 throw new SecurityTokenException("Invalid token");
 
-
+            var teste = principal.Identity.Name;
             return principal;
         }
     }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RestWithASP.NET5Udemy.Business;
@@ -46,5 +47,20 @@ namespace RestWithASP.NET5Udemy.Controllers
 
             return Ok(token);
         }
+
+        [HttpGet]
+        [Authorize("Bearer")]
+        [Route("revoke")]
+        public IActionResult Revoke()
+        {
+            var username = User.Identity.Name;
+            var result = _loginBusiness.RevokeToken(username);
+
+            if (!result)
+                return BadRequest("Invalid client request");
+
+            return NoContent();
+        }
+
     }
 }
