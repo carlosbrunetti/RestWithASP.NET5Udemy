@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "dF34dYaLS8RFV/v4zy+9cUOVPi+GxTktjGE645vmuzJodKvEQWTpXuMH7NjyLGY6KLknwbXdAf/HldQM178q+Q==",
+  "dgSpecHash": "BYEh2VH04Dy2bnXgMaDeqHXAe3wmfzdjTrJFoaHCWvy3VcvfO9bT/LOymXoTtuyLxo6klGTVJrsfxGSG5FVhKw==",
   "success": true,
   "projectFilePath": "C:\\Repository\\RestWithASP.NET5Udemy_Calculator\\RestWithASP.NET5Udemy\\RestWithASP.NET5Udemy\\RestWithASP.NET5Udemy.csproj",
   "expectedPackageFiles": [
@@ -68,6 +68,7 @@
     "C:\\Users\\carlo\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.2\\microsoft.netcore.platforms.2.1.2.nupkg.sha512",
     "C:\\Users\\carlo\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\carlo\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512",
     "C:\\Users\\carlo\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration\\3.1.4\\microsoft.visualstudio.web.codegeneration.3.1.4.nupkg.sha512",
     "C:\\Users\\carlo\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.contracts\\3.1.4\\microsoft.visualstudio.web.codegeneration.contracts.3.1.4.nupkg.sha512",
     "C:\\Users\\carlo\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.core\\3.1.4\\microsoft.visualstudio.web.codegeneration.core.3.1.4.nupkg.sha512",

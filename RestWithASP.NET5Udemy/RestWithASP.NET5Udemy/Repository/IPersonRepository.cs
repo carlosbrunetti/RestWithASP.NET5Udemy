@@ -10,5 +10,7 @@ namespace RestWithASP.NET5Udemy.Repository
     public interface IPersonRepository : IRepository<Person>
     {
         Person Disabled(long id);
+
+        List<Person> FindByName(string firstName, string secondName);
     }
 }

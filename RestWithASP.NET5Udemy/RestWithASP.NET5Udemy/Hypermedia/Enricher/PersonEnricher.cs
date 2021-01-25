@@ -45,6 +45,14 @@ namespace RestWithASP.NET5Udemy.Hypermedia.Enricher
                 Type = "int"
             });
 
+            content.Links.Add(new HyperMediaLink()
+            {
+                Action = HttpActionVerb.PATCH,
+                Href = link,
+                Rel = RelationType.self,
+                Type = ResponseTypeFormat.DefaultPatch
+            });
+
             return null;
         }
 

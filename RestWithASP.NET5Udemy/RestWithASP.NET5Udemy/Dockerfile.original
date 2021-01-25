@@ -1,0 +1,22 @@
+#See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
+
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS base
+WORKDIR /app
+EXPOSE 80
+EXPOSE 443
+
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
+WORKDIR /src
+COPY ["RestWithASP.NET5Udemy/RestWithASP.NET5Udemy.csproj", "RestWithASP.NET5Udemy/"]
+RUN dotnet restore "RestWithASP.NET5Udemy/RestWithASP.NET5Udemy.csproj"
+COPY . .
+WORKDIR "/src/RestWithASP.NET5Udemy"
+RUN dotnet build "RestWithASP.NET5Udemy.csproj" -c Release -o /app/build
+
+FROM build AS publish
+RUN dotnet publish "RestWithASP.NET5Udemy.csproj" -c Release -o /app/publish
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "RestWithASP.NET5Udemy.dll"]

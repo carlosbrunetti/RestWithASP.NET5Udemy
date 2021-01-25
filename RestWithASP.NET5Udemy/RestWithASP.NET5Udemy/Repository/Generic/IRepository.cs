@@ -14,6 +14,7 @@ namespace RestWithASP.NET5Udemy.Repository.Generic
         T Update(T item);
         List<T> FindAll();
         bool Exists(long id);
-
+        List<T> FindWithPagedSearch(string query);
+        int GetCount(string query);
     }
 }
